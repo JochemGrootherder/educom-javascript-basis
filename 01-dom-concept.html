@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript basis</title>
+</head>
+
+<body>
+    <div id="output">
+    </div>
+    <script>
+        let output = document.getElementById("output");
+        utput.innerHTML = "Hello world!";
+    </script>
+    <!-- If we put the script before the div declaration we get the following error:
+              "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')"
+        Which means that the script isn't able to set anything for the 'output' as it doesn't exist at the time -->
+</body>
+
+</html>
