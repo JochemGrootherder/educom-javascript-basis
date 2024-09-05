@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript basis</title>
+</head>
+
+<body>
+    <script>
+        /// Init with values
+        const beatles = ["John", "Paul", "George", "Ringo"]
+        const zeppelin = new Array("Robert", "Jimmy", "John", "John")
+
+        /// Empty init
+        const stones = []
+
+        console.log(beatles[1])
+    </script>
+
+    <script>
+        const beatles2 = ["John", "Paul", "George"]
+        console.log(beatles2)
+
+        /// We forgot Ringo... 
+        beatles2.push("Ringo")
+        console.log(beatles2)
+    </script>
+
+    <script>
+        console.log(beatles)
+        
+        /// John died... :(
+        beatles.pop()
+        
+        /// George died... :(
+        beatles.pop()
+        
+        console.log( beatles ) 
+        </script>
+
+        <script>
+            const asString = beatles2.toString()
+            console.log({ asString: asString })
+            
+            const asJoin = beatles2.join(" * ")
+            console.log({ asJoin: asJoin })
+        </script>
+
+        <script>
+
+            beatles3 = ["Ringo", "Paul", "what's his name?", "John"]
+            beatles3AsString = beatles3.toString();
+            console.log({ before: beatles3AsString })
+            
+            beatles3[2] = "George"
+            beatles3AsString = beatles3.toString();
+            console.log({ after: beatles3AsString })
+
+        </script>
+
+        <script>
+
+            const  beatles3 = ["Ringo", "Paul", "George", "John"]
+            beatles3.sort()
+            console.log(beatles3)
+        
+            /// But...
+            
+            const points = [40, 100, 1, 5, 25, 10]
+            points.sort()
+            console.log(points)
+            /// ????
+
+            const points2 = [40, 100, 1, 5, 25, 10]
+            points2.sort((a,b) => a - b)
+            console.log({proper: points2})
+            
+        </script>
+
+        <script>
+            let txt = ""
+            const  beatles4 = ["Ringo", "Paul", "George", "John"]
+            
+            
+            const inLoop = (value, index, array) => 
+            {
+                txt += value.toUpperCase() + " "
+            }
+            
+            beatles4.forEach(inLoop)
+            console.log(txt)
+        </script>
+
+        <script>
+            const beatles5 = ["Ringo", "Paul", "George", "John"]
+            
+            const  n  = beatles5.map( item => {
+                return(item.toUpperCase())
+            })
+                    
+            console.log(n)
+            
+        </script>
+
+        <script>
+
+            const myFunction = (value, index, array) => { 
+                return value > 18
+            }
+        
+            const numbers = [45, 4, 9, 16, 25]
+            const over18 = numbers.filter(myFunction)
+
+            //// or
+            const n2 = numbers.filter( value => value > 18 )
+            console.log(over18, n2 )
+            
+        </script>
+
+        <script>
+
+            const fruits = ["Apple", "Orange", "Apple", "Mango"]
+            const numbers2 = [4,9,16,25,29]
+            
+            /// Helper function
+            const findOver18 = (item) => {
+                return item > 18
+            }
+            
+            /// indexOf
+            const a = fruits.indexOf("Apple")
+            const b = fruits.lastIndexOf("Apple")
+            
+            // find
+            const c = numbers2.find(findOver18)
+            const d = numbers2.findIndex(findOver18)
+            
+            console.log({ a: a, b: b, c: c, d: d })
+
+        </script>
+
+        <script>
+            const ShoppingCart = 
+            [
+                {
+                    item: "apple",
+                    price: 0.5
+                },
+                {
+                    item: "yoghurt",
+                    price: 1.2
+                },
+                {
+                    item: "eggs",
+                    price: 1.89
+                },
+                {
+                    item: "stroopwafels",
+                    price: 1.5
+                }
+            ]
+
+            let totalPrice = 0.0;
+            const addToTotal = (value, index, array) =>
+            {
+                totalPrice += value.price;
+            }
+
+            ShoppingCart.forEach(addToTotal)
+            totalPrice *= 1.21
+            console.log(totalPrice)
+        </script>
+</body>
+
+</html>
