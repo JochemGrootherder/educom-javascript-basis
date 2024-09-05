@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript basis</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+        for(let i = 0; i <= 100; i++)
+        {
+            if(i % 2 == 0)
+            {
+                total += i;
+            }
+        }
+
+        let sumEven = 0;
+        let i = 0;
+        while(i <= 100)
+        {
+            if(i % 2 == 0)
+            {
+                sumEven += i;
+                i++;
+                //illegal return statement
+                //return true;
+                console.log("true");
+            }
+            i++;
+            //illegal return statement
+            //return false;
+            console.log("false");
+
+        }
+
+        console.log(total);
+        console.log(sumEven);
+    </script>
+</body>
+
+</html>
