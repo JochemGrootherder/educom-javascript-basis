@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript basis</title>
+</head>
+
+<body>
+    <div id="output">
+    </div>
+    <script>
+        let output = document.getElementById("output");
+        output.innerHTML = "Hello world!";
+        /*
+        * This sets a notification when you refresh the page. It will appear as a pop up notification.
+        * let message = "Hello world!"
+        * alert(message)
+        */
+
+        /*
+        * This prints a message in the console log. This log can be found in the developer tools from your browser.
+        * let message = "Hello world!"
+        * console.log(message)
+        */
+        /*
+        * This also prints a message in the console log. However there is a big advantage as it isn't hardcoded
+        * let message = "Hello world!"
+        * console.log(`Message: ${message}`)
+        */
+    </script>
+    <!-- If we put the script before the div declaration we get the following error:
+              "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')"
+        Which means that the script isn't able to set anything for the 'output' as it doesn't exist at the time -->
+</body>
+
+</html>
